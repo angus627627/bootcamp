@@ -1,51 +1,41 @@
 import java.util.Arrays;
 
 public class SearchArray {
-
   public static void main(String[] args) {
-    // Search
+    // search
     char target = 'm';
-    char[] chars = new char[] { 'j', 'p', 'm', 'm', 'q', 'c' };
-
-    for (int i = 0; i < chars.length; i++) {
-      if (chars[i] == target) {
-        System.out.println("index = " + i);
-        break;
+    char[] chars = new char[] {'j', 'p', 'm', 'm', 'q', 'c'};
+    // Loop to find the index of the target in array chars
+    for (int i = 0; i < chars.length; ++i) {
+      if (chars[i] == 'm') {
+        System.out.println("index=" + i);
       }
     }
-
-    // toCharArrat()
-    String str = "i am a boy."; // 11 characters
-    char[] arr = str.toCharArray(); // String ==>> char, save 入arr
+    // toCharArray()
+    String str = "I am a girl."; // 11 characters
+    char[] arr = str.toCharArray(); // length 11
+    // System.out.println(arr[11]); // error
     System.out.println(Arrays.toString(arr));
+    // [I, , a, m, , a, , b, o, y, .]
 
-    //Find Max. value in the array
-    int[] nums = new int[] { 3, 6, -9, 12, 32, 49 };
-    int max = 0;
-    for (int i = 0; i < nums.length; i++) {
+    // Find Max. value in the array
+    int[] nums = new int[] {240, 800, -23, 800, 6, 98};
+    int max = 0; // the min. of int
+    // for loop
+    for (int i = 0; i < nums.length; i++) { // nums.length = 5
+      // i = 0, nums[0] -> 240
       if (nums[i] > max) {
         max = nums[i];
       }
-    }
-    System.out.println(max);
+    } // max = 800
 
-    //Find Min. value in the array
-    int[] nums2 = new int[] { 3, 6, -9, 12, 32, 49 };
+    // Find Min. Value in the array
+    int[] nums2 = new int[] {240, 800, -23, 6, 98};
     int min = 99999999;
-    for (int i = 0; i < nums2.length; i++) {
+    for (int i = 0; i < nums.length; ++i) {
       if (nums2[i] < min) {
         min = nums2[i];
       }
-    }
-    System.out.println(min);
-    //approach 2, find min
-    int[] nums3 = new int[] { 3, 6, -9, 12, -24, 49 };
-    int min1 = nums3[0];
-    for (int i = 1; i < nums3.length; i++) {
-      if (nums3[i] < min1) {
-        min1 = nums3[i];
-      }
-    }
-    System.out.println(min1);
+    } // min = -23
   }
 }
